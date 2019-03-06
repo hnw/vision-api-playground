@@ -2,8 +2,9 @@ require('dotenv').config();
 const yargs = require('yargs')
       .demandCommand(1)
       .usage('Usage: $0 [options] [file]')
-      .default('out', 'out.png')
-      .describe('out', 'Language hints')
+      .default('o', 'out.png')
+      .alias('o', 'output')
+      .describe('o', 'Write to FILE instead of stdout')
       .help()
       .version('0.0.1')
       .locale('en');
